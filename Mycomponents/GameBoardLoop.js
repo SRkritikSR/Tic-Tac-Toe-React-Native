@@ -1,4 +1,4 @@
-\import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 import React, { useState } from 'react'
 import { TouchableOpacity } from 'react-native'
 
@@ -70,7 +70,7 @@ const SetWinner = (Row_Matrix) => {
 
 
   //console.log(stage, 'Set Check Winner')
-  console.log(allLines)
+  // console.log(allLines)
   let IsNotNull = [];
   for (let i = 0; i < allLines.length; i++) {
     const lines = allLines[i]
@@ -141,7 +141,6 @@ const GameBoardLoop = () => {
             // We have made this constant res because if we donot we have to 
             //unnecessary call the OnTouchCell funciotn again and again
             if (res) {
-              console.log(res)
               return
             }
             else {
@@ -152,7 +151,6 @@ const GameBoardLoop = () => {
               }
               if (gameStage[i][j] === null) {
                 gameStage[i][j] = gameSymbol;
-                console.log("in else of Main,Checking now for any win or tie")
               }
               else {
                 return
